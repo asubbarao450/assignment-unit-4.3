@@ -17,7 +17,7 @@ function addItem(item) {
     else if (isFull() === false) {
 
         //if statement pushes item to Array 
-        //and checks for size change before returning true
+
         basket.push(item);
 
         return true;
@@ -27,6 +27,23 @@ function addItem(item) {
 }
 
 
+function removeItem(item) {
+
+    let index = basket.indexOf(item);
+
+    if (index != -1) {
+        basket = basket.splice(index, 1);
+     //confirm if the basket = basket.splice is required
+        return item;
+    }
+
+    else {
+        return null;
+    }
+
+
+
+}
 
 function listItems() {
 
