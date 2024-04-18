@@ -29,11 +29,13 @@ function addItem(item) {
 
 function removeItem(item) {
 
+    //searches for item in basket Array and returns its index
     let index = basket.indexOf(item);
 
+    //confirms that item is present in basket array and removes/splices the 
+    //the item from array
     if (index != -1) {
-        basket = basket.splice(index, 1);
-     //confirm if the basket = basket.splice is required
+        basket.splice(index, 1);
         return item;
     }
 
@@ -61,7 +63,9 @@ function empty() {
 
 function isFull() {
 
+    //checks if array has less than 5 items
     if (basket.length < maxItems) {
+        //returns false for isFull()
         return false;
 
     }
