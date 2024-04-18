@@ -2,16 +2,17 @@ console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
 
-let basket = [];
-
+var basket = [];
+let oldLength=null;
+let newLength = null;
 
 function addItem(item){
     //add item to basket 
     //return true if item was added 
-    let oldLength = item.length;
-    let newLength = null;
+    oldLength = basket.length;
+    newLength = null;
     newLength = basket.push(item);
-
+    
     if (newLength > oldLength) {
         return true;
     }
